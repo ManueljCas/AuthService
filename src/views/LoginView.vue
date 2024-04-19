@@ -11,6 +11,8 @@
           <input type="password" name="Password" v-model="Pass" id="password" placeholder="Ingresa tu contraseña" class="input-field">
         </div>
         <button type="submit" class="login-button submit-button">Iniciar sesión</button>
+        <router-link to="" class="forgot-password-link">¿Olvidaste tu contraseña?</router-link>
+
       </form>
       <p v-if="!error && errorMessage" class="error-message">{{ errorMessage }}</p>
     </div>
@@ -20,6 +22,7 @@
   import { ref } from 'vue'
   import UserService from '@/service/UserService'
   import router from '@/router/index'
+  import Recuperar from '@/views/RecuperarView.vue'
   
   const Email = ref('')
   const Pass = ref('')

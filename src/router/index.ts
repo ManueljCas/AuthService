@@ -6,6 +6,7 @@ import Register from '@/components/Register.vue'
 import LoginView from '@/views/LoginView.vue'
 import Dashboard from '@/views/Dashboard.vue'
 import AuthService from '@/service/UserService'
+import Recuperar from '@/views/RecuperarView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -44,6 +45,11 @@ const router = createRouter({
     {
       path: '/dash',
       name: 'dashboard',
+      component: Dashboard
+    },
+    {
+      path: '/recuperar',
+      name: 'recuperar',
       component: Dashboard
     }
   ]
